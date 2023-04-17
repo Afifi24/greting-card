@@ -23,15 +23,18 @@ const Card = () => {
     });
   };
   return (
-    <div className='flex bg-slate-100 min-h-screen gap-20 flex-col items-center p-4   font-cairo '>
-           <div className='relative flex gap-1 -left-[36%]'>
+    <div className='flex   gap-20 flex-col items-center p-10   font-cairo '>
+          <div  className='flex gap-4 flex-col md:flex-row items-center w-full md:justify-around'>
+          <div className=' flex gap-1'>
             <img className='w-6' src={logo} alt="" />
             <p className='font-bold'>afifi</p>
            </div>
-        <div className=''>
-             <h2 className='text-4xl  text-center font-[700] text-blue-500'>انشاء بطاقة تهنئة العيد المبارك</h2>
-        </div>
-        <div className=' mx-6 md:mx-0 flex flex-col md:flex-row  gap-8 items-center h-[60vh] w-[80%] '>
+             <div className=''>
+                <h2 className='text-4xl  text-center font-[700] text-blue-500'>انشاء بطاقة تهنئة العيد المبارك</h2>
+           </div>
+          </div>
+        <div className=' my-20  flex flex-col md:flex-row  gap-8 items-center h-[60vh] w-[100%] md:w-[80%] '>
+           <div className='flex flex-col gap-3 justify-center items-center'>
            <div ref={cardRef} id='card' className={` min-h-[50vh] ${theme} hero relative shadow gap-4  flex-1 p-10 h-full   rounded-xl flex flex-col justify-center items-center `}>
               <img className='absolute z-0 left-0 top-0 -rotate-[25deg] ' src={img4} alt="" />
               <img className=' absolute z-0 top-0 right-0' src={img1} alt="" />
@@ -44,18 +47,20 @@ const Card = () => {
                </div>
                <p className='relative -left-20 md:-left-28 top-10'>{name}</p>
            </div>
-           <div className='  mx-10 flex  md:flex-1 flex-col p-10 shadow-md bg-white rounded-xl   gap-4'>
-               <input onChange={(e)=>setName(e.target.value)} dir='rtl'  className='shadoww outline-none rounded-md py-2 px-3' type="text" placeholder='اسمك' />
-               <textarea onChange={(e)=>setText(e.target.value)} placeholder='أكتب رسالتك هنا' dir ='rtl' className='shadoww rounded-lg py-2 outline-none px-3' name="message" id="" cols="30" rows="5"></textarea>
-               <button onClick={handleDownload} className='bg-blue-500 py-2 rounded-md text-white hover:bg-blue-800 duration-200 flex items-center justify-center gap-3'><span>تنزيل الصورة</span> <ImCloudDownload className='text-xl'/></button>
-           </div>
-        </div>
-        <div className=' hidden md:flex relative -left-64 -top-6 gap-2'>
+           <div className=' hidden md:flex gap-2'>
             <div onClick={()=>settheme('red')} className='w-20 h-10 cursor-pointer rounded-full red'></div>
             <div onClick={()=>settheme('blue')} className='w-20 h-10 cursor-pointer rounded-full blue'></div>
             <div onClick={()=>settheme('green')} className='w-20 h-10 cursor-pointer rounded-full green'></div>
             <div onClick={()=>settheme('yellow')} className='w-20 h-10 cursor-pointer rounded-full yellow'></div>
         </div>
+           </div>
+           <div className=' flex w-full  flex-col p-3 md:p-8 shadow-md bg-white rounded-xl   gap-4'>
+               <input onChange={(e)=>setName(e.target.value)} dir='rtl'  className='shadoww w-full outline-none rounded-md py-2 px-3' type="text" placeholder='اسمك' />
+               <textarea onChange={(e)=>setText(e.target.value)} placeholder='أكتب رسالتك هنا' dir ='rtl' className='shadoww rounded-lg w-full py-2 outline-none px-3' name="message" id="" cols="30" rows="5"></textarea>
+               <button onClick={handleDownload} className='bg-blue-500 py-2 rounded-md text-white hover:bg-blue-800 duration-200 flex items-center w-full justify-center gap-3'><span>تنزيل الصورة</span> <ImCloudDownload className='text-xl'/></button>
+           </div>
+        </div>
+       
     </div>
   )
 }
