@@ -23,23 +23,23 @@ const Card = () => {
     });
   };
   return (
-    <div className='flex   gap-20 flex-col items-center p-10   font-cairo '>
-          <div  className='flex gap-4 flex-col md:flex-row items-center w-full md:justify-around'>
+    <div className='flex min-h-screen md:gap-20 flex-col items-center p-10   font-cairo '>
+          <div  className='flex gap-4  flex-col md:flex-row items-center w-full md:justify-around'>
           <div className=' flex gap-1'>
             <img className='w-6' src={logo} alt="" />
             <p className='font-bold'>afifi</p>
            </div>
-             <div className=''>
-                <h2 className='text-4xl  text-center font-[700] text-blue-500'>انشاء بطاقة تهنئة العيد المبارك</h2>
+             <div className='py-2'>
+                <h2 className='text-4xl  text-center font-[700] gradientcolor'>انشاء بطاقة تهنئة العيد المبارك</h2>
            </div>
           </div>
         <div className=' my-20  flex flex-col md:flex-row  gap-8 items-center h-[60vh] w-[100%] md:w-[80%] '>
-           <div className='flex flex-col gap-3 justify-center items-center'>
-           <div ref={cardRef} id='card' className={` min-h-[50vh] ${theme} hero relative shadow gap-4  flex-1 p-10 h-full   rounded-xl flex flex-col justify-center items-center `}>
+           <div className='flex mx-10 flex-col gap-3 justify-center items-center'>
+           <div ref={cardRef} id='card' className={` min-h-[50vh] ${theme} hero relative shadoww gap-4  flex-1 p-10 h-full   rounded-xl flex flex-col justify-center items-center `}>
               <img className='absolute z-0 left-0 top-0 -rotate-[25deg] ' src={img4} alt="" />
               <img className=' absolute z-0 top-0 right-0' src={img1} alt="" />
               <img className='absolute z-0 w-48  md:w-56 -rotate-[30deg] left-10 top-1/2 -translate-y-1/2' src={img2} alt="" />
-              <img className='absolute z-0 right-36 w-12 rotate-[20deg] top-0 md:top-0 md:w-16' src={img3} alt="" />
+              <img className='absolute z-0 right-28 w-14  rotate-[20deg] top-0 md:top-0 md:w-10' src={img3} alt="" />
                <h2 className='text-3xl z-10 font-[700] text-blue-700'>عيدكم مبارك</h2>
                <div className='z-10'>
                <p className='font-[300] z-10 text-center'>أتمنى لكم عيد مبارك سعيد وكل عام وأنتم بألف خير</p>
@@ -47,7 +47,7 @@ const Card = () => {
                </div>
                <p className='relative -left-20 md:-left-28 top-10'>{name}</p>
            </div>
-           <div className=' hidden md:flex gap-2'>
+           <div className='  flex gap-2'>
             <div onClick={()=>settheme('red')} className='w-20 h-10 cursor-pointer rounded-full red'></div>
             <div onClick={()=>settheme('blue')} className='w-20 h-10 cursor-pointer rounded-full blue'></div>
             <div onClick={()=>settheme('green')} className='w-20 h-10 cursor-pointer rounded-full green'></div>
