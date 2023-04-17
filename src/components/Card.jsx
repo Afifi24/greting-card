@@ -1,5 +1,6 @@
 import React,{useState, useRef} from 'react'
 import {ImCloudDownload} from 'react-icons/im'
+import {AiFillHeart} from 'react-icons/ai'
 import img4 from '../assets/img4.png'
 import img1 from '../assets/img1.png'
 import img2 from '../assets/img2.png'
@@ -13,6 +14,8 @@ const Card = () => {
     const [text, setText] = useState('')
     
   const cardRef = useRef(null);
+  const bgImageElement = useRef(null);
+
 
   const handleDownload = () => {
     html2canvas(cardRef.current).then((canvas) => {
@@ -22,6 +25,7 @@ const Card = () => {
       link.click();
     });
   };
+ 
   return (
     <div className='flex min-h-screen md:gap-20 flex-col items-center p-10   font-cairo '>
           <div  className='flex gap-4  flex-col md:flex-row items-center w-full md:justify-around'>
@@ -30,22 +34,22 @@ const Card = () => {
             <p className='font-bold'>afifi</p>
            </div>
              <div className='py-2'>
-                <h2 className='text-4xl  text-center font-[700] gradientcolor'>انشاء بطاقة تهنئة العيد المبارك</h2>
+                <h2 className='text-4xl py-2 text-center font-[700] gradientcolor'>انشاء بطاقة تهنئة العيد المبارك</h2>
            </div>
           </div>
         <div className=' my-20  flex flex-col md:flex-row  gap-8 items-center h-[60vh] w-[100%] md:w-[80%] '>
            <div className='flex mx-10 flex-col gap-3 justify-center items-center'>
-           <div ref={cardRef} id='card' className={` min-h-[50vh] ${theme} hero relative shadoww gap-4  flex-1 p-10 h-full   rounded-xl flex flex-col justify-center items-center `}>
-              <img className='absolute z-0 left-0 top-0 -rotate-[25deg] ' src={img4} alt="" />
+           <div ref={cardRef}  className={` min-h-[50vh] ${theme} hero relative shadoww gap-4  flex-1 p-10 h-full   rounded-md flex flex-col justify-center items-center `}>
+              <img   className='absolute z-0 left-0 top-0 -rotate-[25deg] ' src={img4} alt="" />
               <img className=' absolute z-0 top-0 right-0' src={img1} alt="" />
-              <img className='absolute z-0 w-48  md:w-56 -rotate-[30deg] left-10 top-1/2 -translate-y-1/2' src={img2} alt="" />
+              <img className='absolute z-0 w-48  md:w-56 -rotate-[30deg] left-4 top-0 -translate-y-1/2' src={img2} alt="" />
               <img className='absolute z-0 right-28 w-14  rotate-[20deg] top-0 md:top-0 md:w-10' src={img3} alt="" />
-               <h2 className='text-3xl z-10 font-[700] text-blue-700'>عيدكم مبارك</h2>
+               <h2 className='text-3xl z-40 font-[700] text-blue-700'>عيدكم مبارك</h2>
                <div className='z-10'>
-               <p className='font-[300] z-10 text-center'>أتمنى لكم عيد مبارك سعيد وكل عام وأنتم بألف خير</p>
-               <p className='font-[300] z-10 text-center'>{text}</p>
+               <p className='font-[300] z-40 text-center'>{text}</p>
+               <p className='font-[300] z-40 text-center'>أتمنى لكم عيد مبارك سعيد وكل عام وأنتم بألف خير </p>
                </div>
-               <p className='relative -left-20 md:-left-28 top-10'>{name}</p>
+               <p className='relative z-40 -left-20 md:-left-28 top-10'>{name}</p>
            </div>
            <div className='  flex gap-2'>
             <div onClick={()=>settheme('red')} className='w-20 h-10 cursor-pointer rounded-full red'></div>
