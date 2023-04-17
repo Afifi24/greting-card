@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.shadoww{
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.shadowww{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.bgimg{
+    background-image: url('./assets/Capture4.PNG');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+.hero{
+
+/* background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+
+
+}
+.red{
+background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+.blue{
+    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+
+}
+.green{
+    background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+
+}
+.yellow{
+    /* background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%); */
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(176,229,208,1) 42%, rgba(92,202,238,0.41) 93.6% ); */
+    /* background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%); */
+    background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
+}
